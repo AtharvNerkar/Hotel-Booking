@@ -1,7 +1,7 @@
 import { Webhook } from "svix";
 import User from "../models/User.js";
 
-const clerWebhooks = async (req, res) => {
+const clerkWebhooks = async (req, res) => {
   try {
     const whook = new Webhook(process.env.CLERK_WEBHOOK_SECRET);
     // Gettting Headers
@@ -32,7 +32,7 @@ const clerWebhooks = async (req, res) => {
         break;
       }
       case "user.deleted": {
-        await userData.findByIdAndDelete(data.id);
+        await User.findByIdAndDelete(data.id);
         break;
       }
       default:
@@ -44,4 +44,4 @@ const clerWebhooks = async (req, res) => {
     res.json({ success: false, message: error.message });
   }
 };
-export default clerWebhooks;
+export default clerkWebhooks;
