@@ -36,9 +36,3 @@ A full-stack **Hotel Booking System** built with the **MERN stack**, featuring u
 
 ---
 
-## ⚙️ Installation & Setup  
-
-1. Clone the repository  
-   ```bash
-   git clone https://github.com/your-username/hotel-booking-system.git
-   cd hotel-booking-system
